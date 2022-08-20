@@ -1,0 +1,26 @@
+{
+  "name": "@nanuya/monorepo-yarn-turborepo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:nanuya/monorepo-yarn-turborepo.git",
+  "author": "bomee.yoon",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "docs",
+    "packages/**/*",
+    "apps/**/*"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "test": "turbo run test",
+    "lint": "turbo run lint",
+    "dev": "turbo run dev",
+    "graph": "turbo run build --graph"
+  },
+  "devDependencies": {
+    "next": "^12.2.5",
+    "turbo": "^1.4.3"
+  },
+  "packageManager": "yarn@3.2.2"
+}
