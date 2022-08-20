@@ -6,20 +6,19 @@
   "author": "bomee.yoon",
   "license": "MIT",
   "private": true,
+  "baseBranch": "origin/main",
   "workspaces": [
-    "docs",
-    "packages/**/*",
-    "apps/**/*"
+    "packages/*",
+    "apps/*"
   ],
   "scripts": {
     "build": "turbo run build",
     "test": "turbo run test",
     "lint": "turbo run lint",
-    "dev": "turbo run dev",
+    "dev": "turbo run dev --no-cache --parallel --continue",
     "graph": "turbo run build --graph"
   },
   "devDependencies": {
-    "next": "^12.2.5",
     "turbo": "^1.4.3"
   },
   "packageManager": "yarn@3.2.2"
